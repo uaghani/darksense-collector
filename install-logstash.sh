@@ -30,6 +30,13 @@ sudo mkdir -p /etc/logstash/conf.d
 # Copy pipeline configs
 if [ -d "$SOURCE_DIR" ]; then
     sudo cp -f "$SOURCE_DIR"/*.conf /etc/logstash/conf.d/
+    # Copy pipelines.yaml to /etc/logstash/
+    if [ -f "$SOURCE_DIR/pipelines.yml" ]; then
+        sudo cp -f "$SOURCE_DIR/pipelines.yml" /etc/logstash/
+    fi
+    if [ -f "$SOURCE_DIR/pipelines.yaml" ]; then
+        sudo cp -f "$SOURCE_DIR/pipelines.yaml" /etc/logstash/
+    fi
 else
     echo "ERROR: Provided source directory does not exist: $SOURCE_DIR"
     exit 1
