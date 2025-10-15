@@ -34,9 +34,6 @@ if [ -d "$SOURCE_DIR" ]; then
     if [ -f "$SOURCE_DIR/pipelines.yml" ]; then
         sudo cp -f "$SOURCE_DIR/pipelines.yml" /etc/logstash/
     fi
-    if [ -f "$SOURCE_DIR/pipelines.yaml" ]; then
-        sudo cp -f "$SOURCE_DIR/pipelines.yml" /etc/logstash/
-    fi
 else
     echo "ERROR: Provided source directory does not exist: $SOURCE_DIR"
     exit 1
