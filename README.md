@@ -43,9 +43,27 @@ darksense-collector/
 
 ## Quick Start
 
+### Download the Repository
+
+First, clone the repository to the root home directory:
+
+```bash
+cd /root
+git clone https://github.com/uaghani/darksense-collector.git
+cd darksense-collector
+```
+
+### Make Scripts Executable
+
+Make both setup scripts executable:
+
+```bash
+chmod +x initial-setup-ubuntu.sh install-logstash.sh
+```
+
 ### 1. Initial System Setup
 
-First, configure your Ubuntu system with static networking:
+Configure your Ubuntu system with static networking:
 
 ```bash
 sudo ./initial-setup-ubuntu.sh

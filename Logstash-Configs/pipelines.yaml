@@ -1,9 +1,8 @@
-- pipeline.id: os_windows
-  path.config: "/etc/logstash/conf.d/os_windows.conf"
-  pipeline.workers: 1
-  pipeline.batch.size: 125
-
 - pipeline.id: prod_k8s_out
   path.config: "/etc/logstash/conf.d/prod_k8s_out.conf"
   pipeline.workers: 2
   pipeline.batch.size: 125
+  
+- pipeline.id: os_windows
+  path.config: "/etc/logstash/conf.d/os_windows.conf"
+
