@@ -1,8 +1,7 @@
 - pipeline.id: prod_k8s_out
   path.config: "/etc/logstash/conf.d/prod_k8s_out.conf"
-  pipeline.workers: 2
-  pipeline.batch.size: 125
-  
+  queue.type: persisted
+  queue.max_bytes: 4096mb
+
 - pipeline.id: os_windows
   path.config: "/etc/logstash/conf.d/os_windows.conf"
-
