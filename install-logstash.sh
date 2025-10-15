@@ -29,7 +29,7 @@ sudo mkdir -p /etc/logstash/conf.d
 
 # Copy pipeline configs
 if [ -d "$SOURCE_DIR" ]; then
-    sudo cp "$SOURCE_DIR"/*.conf /etc/logstash/conf.d/
+    sudo cp -f "$SOURCE_DIR"/*.conf /etc/logstash/conf.d/
 else
     echo "ERROR: Provided source directory does not exist: $SOURCE_DIR"
     exit 1
