@@ -3,8 +3,8 @@
 set -e
 
 # Prompt for source directory containing pipeline config files
-read -p "Enter the path to your Logstash pipeline config files [/root/Collector-Config/Logstash-Configs/]: " SOURCE_DIR
-SOURCE_DIR=${SOURCE_DIR:-/root/Collector-Config/Logstash-Configs/}
+read -p "Enter the path to your Logstash pipeline config files [/root/darksense-collector/Logstash-Configs/]: " SOURCE_DIR
+SOURCE_DIR=${SOURCE_DIR:-/root/darksense-collector/Logstash-Configs/}
 
 # Remove old Elastic key and repo files if present
 sudo rm -f /etc/apt/trusted.gpg.d/elastic.gpg
